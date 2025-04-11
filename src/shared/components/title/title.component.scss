@@ -1,0 +1,8 @@
+.port-title {
+  font-size: 20px;
+
+  //only allow text to be projected
+  > * {
+    display: none;
+  }
+}

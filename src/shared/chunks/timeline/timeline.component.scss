@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.port-timeline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  &::after {
+    content: "";
+    background: red;
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+
+  > * {
+    display: grid;
+    grid-template-columns: subgrid;
+    position: relative;
+    &::before {
+      content: "";
+      width: 10px;
+      height: 100%;
+      position: absolute;
+      background: white;
+      left: calc(50% - 5px);
+    }
+
+    &::after {
+      content: "";
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      background: white;
+      left: calc(50% - 13px);
+      top: calc(50% - 13px);
+      border-radius: 50%;
+    }
+
+    &:nth-child(odd) {
+      grid-column: 1 / 4;
+    }
+
+    &:nth-child(even) {
+      grid-column: 3 / 4;
+
+      &::before {
+        left: calc(-20px - 5px);
+      }
+
+      &::after {
+        left: calc(-20px - 13px);
+      }
+    }
+
+    &:last-child {
+      &::before {
+        border-end-end-radius: 5px;
+        border-end-start-radius: 5px;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        border-start-end-radius: 5px;
+        border-start-start-radius: 5px;
+      }
+    }
+  }
+}
