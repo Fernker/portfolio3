@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .port-badge {
   width: 10px;
   height: 10px;
@@ -10,13 +14,21 @@
 
   &--size {
     &-md {
-      width: 50px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
     }
 
     &-sm {
       width: 25px;
       height: 25px;
+    }
+  }
+
+  &--interactive {
+    display: inline-block;
+
+    &:hover {
+      transform: rotate(5deg);
     }
   }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, model } from '@angular/core';
 
 @Component({
   selector: 'port-badge',
@@ -8,9 +8,11 @@ import { Component, computed, input } from '@angular/core';
   styleUrl: './badge.component.scss',
 })
 export class BadgeComponent {
-  size = input<'sm' | 'md'>('md');
+  size = model<'sm' | 'md'>('md');
 
   imgPath = input.required<string>();
+
+  linkPath = input<string>();
 
   protected _mergedClasses = computed(() => [
     this._generateClass('size', this.size()),

@@ -1,4 +1,5 @@
-import { Component, Directive } from '@angular/core';
+import { Component, contentChildren, Directive, effect } from '@angular/core';
+import { BadgeComponent } from '../badge/badge.component';
 
 @Directive({
   selector: 'port-card-title',
@@ -10,16 +11,33 @@ export class CardTitleComponent {}
 })
 export class CardSubTitleComponent {}
 
+@Directive({
+  selector: 'port-card-image',
+})
+export class CardImageComponent {}
+
 @Component({
   selector: 'port-card',
-  imports: [CardTitleComponent, CardSubTitleComponent],
+  imports: [CardTitleComponent, CardSubTitleComponent, CardImageComponent],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })
-export class CardComponent {}
+export class CardComponent {
+  private _badges = contentChildren(BadgeComponent, { descendants: true });
+
+  constructor() {
+    effect(() => {
+      this._badges().forEach((badge) => {
+        console.log('badge', badge);
+        badge.size.set('sm');
+      });
+    });
+  }
+}
 
 export const CardComponents = [
   CardComponent,
   CardTitleComponent,
   CardSubTitleComponent,
+  CardImageComponent,
 ];

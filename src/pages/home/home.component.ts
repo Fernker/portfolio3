@@ -34,6 +34,7 @@ import { FooterComponent } from '../../shared/chunks/footer/footer.component';
 })
 export class HomeComponent {
   mySize: 'md' | 'sm' = 'md';
+
   // mySize = signal<'md' | 'sm'>('md');
 
   constructor() {

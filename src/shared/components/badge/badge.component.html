@@ -1,3 +1,14 @@
+@if (linkPath()) {
+<a
+  [href]="linkPath()"
+  class="port-badge port-badge--interactive"
+  [ngClass]="_mergedClasses()"
+>
+  <img [src]="imgPath()" />
+</a>
+} @else {
+
 <div class="port-badge" [ngClass]="_mergedClasses()">
   <img [src]="imgPath()" />
 </div>
+}
