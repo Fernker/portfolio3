@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { SectionComponent } from '../../shared/components/section/section.component';
 import {
   HeroComponent,
@@ -29,7 +29,14 @@ import { FooterComponent } from '../../shared/chunks/footer/footer.component';
   templateUrl: './skills-page.component.html',
   styleUrl: './skills-page.component.scss',
   host: {
-    class: 'layouts--main',
+    class: 'layouts--main layouts--main-short',
   },
 })
-export class SkillsPageComponent {}
+export class SkillsPageComponent {
+  readonly skillName = input<string>();
+
+  protected skillNameCap = computed(() => {
+    const skillName = this.skillName() || '';
+    return skillName.charAt(0).toUpperCase() + skillName.slice(1);
+  });
+}

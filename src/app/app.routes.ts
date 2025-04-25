@@ -10,10 +10,16 @@ export const routes: Routes = [
   },
   {
     path: 'projects/:projectName',
+    data: {
+      type: 'project',
+    },
     component: DetailsPageComponent,
   },
   {
     path: 'experiences/:experienceName',
+    data: {
+      type: 'experience',
+    },
     component: DetailsPageComponent,
   },
   {

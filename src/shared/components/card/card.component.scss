@@ -11,6 +11,7 @@
   grid-template-columns: 0.4fr minmax(0, 1fr);
   row-gap: 20px;
   column-gap: 20px;
+  height: 100%;
 
   // If no image is present, remove leading column
   &:has(#{&}__img:empty) {
@@ -60,8 +61,9 @@
   &__img {
     aspect-ratio: 1/1;
 
-    port-card-image {
+    &::ng-deep port-card-image {
       display: block;
+      line-height: 0;
     }
 
     &::ng-deep img {

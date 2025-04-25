@@ -1,15 +1,17 @@
 <port-section>
-  <port-hero>
-    <port-hero-title>Project/Job title</port-hero-title>
-    <port-hero-tag>Some tagline</port-hero-tag>
-  </port-hero>
-  <div>
-    <port-badge imgPath="https://placehold.co/100" />
+  <div class="details__hero">
+    <port-hero>
+      <port-hero-title>{{ typeCap() }} title</port-hero-title>
+      <port-hero-tag>Some tagline</port-hero-tag>
+    </port-hero>
+    <div class="details__hero-skills">
+      <port-badge imgPath="https://placehold.co/100" />
+    </div>
   </div>
 </port-section>
 
 <port-section>
-  <port-title>Project Details</port-title>
+  <port-title>{{ typeCap() }} Details</port-title>
   <div>
     <ul>
       <li>Foo</li>
@@ -18,7 +20,7 @@
 </port-section>
 
 <port-section>
-  <port-title>Portfolio</port-title>
+  <port-title>{{ typeCap() }} Portfolio</port-title>
   <div class="layouts--dual-column">
     <port-card> </port-card>
   </div>

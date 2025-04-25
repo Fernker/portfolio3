@@ -28,7 +28,6 @@ export class CardComponent {
   constructor() {
     effect(() => {
       this._badges().forEach((badge) => {
-        console.log('badge', badge);
         badge.size.set('sm');
       });
     });

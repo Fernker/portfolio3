@@ -1,15 +1,11 @@
 <port-section>
   <port-hero>
-    <port-hero-title>Skill: </port-hero-title>
-    <port-hero-tag>Some tagline</port-hero-tag>
+    <port-hero-title>Skill: {{ skillNameCap() }} </port-hero-title>
   </port-hero>
-  <div>
-    <port-badge imgPath="https://placehold.co/100" />
-  </div>
 </port-section>
 
 <port-section>
-  <port-title>Portfolio</port-title>
+  <port-title>{{ skillNameCap() }} used for:</port-title>
   <div class="layouts--dual-column">
     <port-card>
       <port-card-image>

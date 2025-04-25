@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { SectionComponent } from '../../shared/components/section/section.component';
 import {
   HeroComponent,
@@ -25,9 +25,16 @@ import { FooterComponent } from '../../shared/chunks/footer/footer.component';
     FooterComponent,
   ],
   host: {
-    class: 'layouts--main',
+    class: 'layouts--main layouts--main-half',
   },
   templateUrl: './details-page.component.html',
   styleUrl: './details-page.component.scss',
 })
-export class DetailsPageComponent {}
+export class DetailsPageComponent {
+  readonly type = input<string>();
+
+  protected typeCap = computed(() => {
+    const type = this.type() || '';
+    return type.charAt(0).toUpperCase() + type.slice(1);
+  });
+}
