@@ -33,7 +33,13 @@
                 "glob": "**/*",
                 "input": "public"
               }
+
             ],
+            "stylePreprocessorOptions": {
+          "includePaths": [
+            "src/styles"
+          ]
+            },
             "styles": [
               "src/styles.scss"
             ],

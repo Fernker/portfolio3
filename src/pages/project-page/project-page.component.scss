@@ -1,0 +1,11 @@
+.project {
+    &__hero {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+
+        &-img {
+            align-self: center;
+            justify-self: center;
+        }
+    }
+}

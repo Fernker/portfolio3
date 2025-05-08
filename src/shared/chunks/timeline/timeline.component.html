@@ -1,27 +1,16 @@
 <div class="port-timeline">
-  <port-card>
-    <port-card-title>1 Title</port-card-title>
-    <port-card-sub-title>Sub-title</port-card-sub-title>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, explicabo
-    commodi illo sequi expedita similique ducimus ullam praesentium eligendi!
-    Vitae est voluptas velit quo quia!
-  </port-card>
-
-  <port-card>
-    <port-card-title>2 Title</port-card-title>
-    <port-card-sub-title>Sub-title</port-card-sub-title>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, explicabo
-    commodi illo sequi expedita similique ducimus ullam praesentium eligendi!
-    Vitae est voluptas velit quo quia! Lorem ipsum dolor sit amet, consectetur
-    adipisicing elit. Possimus error modi velit a dolores veniam laudantium
-    inventore voluptate nostrum! Quasi?
-  </port-card>
-
-  <port-card>
-    <port-card-title>3 Title</port-card-title>
-    <port-card-sub-title>Sub-title</port-card-sub-title>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, explicabo
-    commodi illo sequi expedita similique ducimus ullam praesentium eligendi!
-    Vitae est voluptas velit quo quia!
-  </port-card>
+    @for (experience of entries(); track experience.company) {
+        <a href="/experiences/{{ experience.slug }}">
+            <port-card>
+                <port-card-title>{{ experience.company }}</port-card-title>
+                <port-card-sub-title>{{ experience.title }}</port-card-sub-title>
+                <port-card-image>
+                    <img
+                        [src]="experience.companyImgUrl"
+                        alt=""
+                    />
+                </port-card-image>
+            </port-card>
+        </a>
+    }
 </div>

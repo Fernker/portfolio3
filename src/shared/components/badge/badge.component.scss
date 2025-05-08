@@ -1,34 +1,33 @@
 :host {
-  display: block;
+    display: block;
 }
 
 .port-badge {
-  width: 10px;
-  height: 10px;
-  background: gray;
+    width: 10px;
+    height: 10px;
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  &--size {
-    &-md {
-      width: 100px;
-      height: 100px;
+    img {
+        width: 100%;
+        height: 100%;
     }
 
-    &-sm {
-      width: 25px;
-      height: 25px;
-    }
-  }
+    &--size {
+        &-md {
+            width: 100px;
+            height: 100px;
+        }
 
-  &--interactive {
-    display: inline-block;
-
-    &:hover {
-      transform: rotate(5deg);
+        &-sm {
+            width: 25px;
+            height: 25px;
+        }
     }
-  }
+
+    &--interactive {
+        display: inline-block;
+
+        &:hover {
+            transform: rotate(5deg);
+        }
+    }
 }

@@ -1,90 +1,100 @@
+@use 'colors';
+
 :host {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
+}
+
+::ng-deep a:has(.port-card) {
+    &:hover {
+        scale: 1.02;
+        transition: scale 0.2s ease-in-out;
+    }
 }
 
 .port-card {
-  background: lightgray;
-  border-radius: 8px;
-  padding: 8px;
-  display: grid;
-  grid-template-columns: 0.4fr minmax(0, 1fr);
-  row-gap: 20px;
-  column-gap: 20px;
-  height: 100%;
-
-  // If no image is present, remove leading column
-  &:has(#{&}__img:empty) {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  // If there's an image but no content
-  $parent: &;
-  &:has(#{&}__img):has(#{&}__title:empty):has(#{&}__sub-title:empty) {
-    grid-template-columns: 1fr;
-
-    #{$parent}__img {
-      width: auto;
-      max-width: 100%;
-    }
-
-    #{$parent}__info {
-      display: none;
-    }
-  }
-
-  &__title {
-    font-size: 26px;
-  }
-
-  &__sub-title {
-    font-size: 20px;
-  }
-
-  &__made-with {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
-
-    &:not(:has(port-badge)) {
-      display: none;
-    }
-
-    &::ng-deep {
-      port-badge {
-        display: inline-block;
-      }
-    }
-  }
-
-  &__img {
-    aspect-ratio: 1/1;
-
-    &::ng-deep port-card-image {
-      display: block;
-      line-height: 0;
-    }
-
-    &::ng-deep img {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    &:empty {
-      display: none;
-    }
-  }
-
-  &__info {
+    background: colors.color(surface);
+    color: colors.color(onSurface);
+    border-radius: 8px;
+    padding: 8px;
     display: grid;
+    grid-template-columns: 0.4fr minmax(0, 1fr);
     row-gap: 20px;
-    grid-auto-rows: min-content;
+    column-gap: 20px;
+    height: 100%;
 
-    > * {
-      &:empty {
-        display: none;
-      }
+    // If no image is present, remove leading column
+    &:has(#{&}__img:empty) {
+        grid-template-columns: minmax(0, 1fr);
     }
-  }
+
+    // If there's an image but no content
+    $parent: &;
+    &:has(#{&}__img):has(#{&}__title:empty):has(#{&}__sub-title:empty) {
+        grid-template-columns: 1fr;
+
+        #{$parent}__img {
+            width: auto;
+            max-width: 100%;
+        }
+
+        #{$parent}__info {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+    }
+
+    &__sub-title {
+        font-size: 20px;
+    }
+
+    &__made-with {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+
+        &:not(:has(port-badge)) {
+            display: none;
+        }
+
+        &::ng-deep {
+            port-badge {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__img {
+        aspect-ratio: 1/1;
+
+        &::ng-deep port-card-image {
+            display: block;
+            line-height: 0;
+        }
+
+        &::ng-deep img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__info {
+        display: grid;
+        row-gap: 20px;
+        grid-auto-rows: min-content;
+
+        > * {
+            &:empty {
+                display: none;
+            }
+        }
+    }
 }

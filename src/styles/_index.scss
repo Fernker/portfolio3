@@ -1,3 +1,9 @@
-@use "normalize";
+@use 'normalize';
 
-@use "layouts";
+@use 'layouts';
+
+@use 'typography';
+
+@use 'colors';
+
+@include colors.getThemes();

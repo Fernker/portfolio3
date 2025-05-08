@@ -1,7 +1,10 @@
+@use 'colors';
+
 .port-button {
-  border: none;
-  background: none;
-  padding: 16px 24px;
-  background: #eee;
-  border-radius: 12px;
+    border: none;
+    background: none;
+    padding: 16px 24px;
+    background: colors.color(primary);
+    color: colors.color(onPrimary);
+    border-radius: 12px;
 }

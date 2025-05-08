@@ -1,0 +1,50 @@
+<port-section>
+    <div class="project__hero">
+        <port-hero>
+            <port-hero-title>{{ project().name }}</port-hero-title>
+            <port-hero-tag></port-hero-tag>
+        </port-hero>
+        <div class="project__hero-img">
+            <port-badge badge="Angular" />
+        </div>
+    </div>
+</port-section>
+
+<port-section>
+    <!-- <port-title>{{ project().status }}</port-title> -->
+    Status: {{ project().status }}
+    <div>
+        @if (description()) {
+            @for (para of description(); track $index) {
+                <p>{{ para }}</p>
+            }
+        }
+        @if (project().descriptionBullets) {
+            <ul>
+                @for (bullet of project().descriptionBullets; track $index) {
+                    <li>{{ bullet }}</li>
+                }
+            </ul>
+        }
+    </div>
+</port-section>
+
+@if (project().skills) {
+    <port-section>
+        <port-title>Built with</port-title>
+        <div class="layouts--dual-column">
+            <!-- <port-badge></port-badge> -->
+        </div>
+    </port-section>
+}
+
+@if (project().screenshots) {
+    <port-section>
+        <port-title>Highlights</port-title>
+        <div class="layouts--dual-column">
+            <port-card> </port-card>
+        </div>
+    </port-section>
+}
+
+<port-footer />

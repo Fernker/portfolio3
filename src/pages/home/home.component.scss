@@ -1,14 +1,18 @@
 .home {
-  &-hero {
-    display: grid;
-    row-gap: 20px;
-    grid-template-rows: auto minmax(0, 1fr);
+    &-hero {
+        display: grid;
+        row-gap: 20px;
+        grid-template-rows: auto minmax(0, 1fr);
 
-    &__footer {
-      align-self: end;
-      justify-self: end;
-      column-gap: 20px;
-      display: flex;
+        &__tag {
+            max-width: 650px;
+        }
+
+        &__footer {
+            align-self: end;
+            justify-self: end;
+            column-gap: 20px;
+            display: flex;
+        }
     }
-  }
 }

@@ -1,0 +1,14 @@
+.experience {
+    &__hero {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+
+        &-img {
+            align-self: center;
+            justify-self: center;
+        }
+    }
+    &__date {
+        font-size: 20px;
+    }
+}

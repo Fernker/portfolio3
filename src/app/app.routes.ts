@@ -1,29 +1,29 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from '../pages/home/home.component';
-import { DetailsPageComponent } from '../pages/details-page/details-page.component';
-import { SkillsPageComponent } from '../pages/skills-page/skills-page.component';
+import { URLGuard } from '../shared/guards/url.guard';
+import { ExperiencePageComponent } from '../pages/experience-page/experience-page.component';
+import { ProjectPageComponent } from '../pages/project-page/project-page.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'projects/:projectName',
-    data: {
-      type: 'project',
+    {
+        path: '',
+        component: HomeComponent
     },
-    component: DetailsPageComponent,
-  },
-  {
-    path: 'experiences/:experienceName',
-    data: {
-      type: 'experience',
+    {
+        path: 'projects/:projectName',
+        // canActivate: [URLGuard],
+
+        component: ProjectPageComponent
     },
-    component: DetailsPageComponent,
-  },
-  {
-    path: 'skills/:skillName',
-    component: SkillsPageComponent,
-  },
+    {
+        path: 'experiences/:experienceCompanyName',
+        canActivate: [URLGuard],
+        component: ExperiencePageComponent
+    },
+    {
+        path: 'skills/:skillName',
+        redirectTo: 'home'
+        // component: SkillsPageComponent,
+        // canActivate: [URLGuard]
+    }
 ];

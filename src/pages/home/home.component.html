@@ -1,152 +1,89 @@
 <port-section>
-  <div class="home-hero">
-    <port-hero>
-      <port-hero-title>This is a title</port-hero-title>
-      <port-hero-tag>Some tagline</port-hero-tag>
-    </port-hero>
-    <div class="home-hero__footer">
-      <port-button>Hi</port-button>
-      <port-button>Hi</port-button>
+    <div class="home-hero">
+        <port-hero>
+            <port-hero-title>Hi, I'm Kenny Fernsten</port-hero-title>
+            <port-hero-tag class="home-hero__tag"
+                >I'm a senior web developer with a strong emphasis in frontend
+                development.</port-hero-tag
+            >
+        </port-hero>
+        <div class="home-hero__footer">
+            <port-button>GitHub</port-button>
+            <port-button>LinkedIn</port-button>
+        </div>
     </div>
-  </div>
 </port-section>
 
 <port-section>
-  <port-title>This is a bio</port-title>
-  <div>
-    {{ mySize }}
-    <port-badge imgPath="https://placehold.co/100" [size]="mySize" />
-  </div>
+    <port-title>My Areas of Focus</port-title>
+    <div>
+        <ul>
+            <li>Architecting, building, and maintaing component libraries.</li>
+            <li>Working with designers to close the gap between developers and design.</li>
+            <li>
+                Documenting and testing components for stability and ease of developer consumption.
+            </li>
+            <li>Creating consistent architecture and APIs with minimal breaking changes.</li>
+        </ul>
+    </div>
 </port-section>
 
 <port-section>
-  <port-title>Skillz</port-title>
+    <port-title>My Top Skills</port-title>
 
-  <div class="skillz layouts--grid">
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-    <port-badge
-      imgPath="https://placehold.co/200"
-      linkPath="/skills/foo"
-      size="md"
-    />
-  </div>
+    <div class="skillz layouts--grid">
+        @for (skill of dataService.data().skills; track skill) {
+            <port-badge
+                [badge]="skill"
+                size="md"
+            />
+        }
+    </div>
 </port-section>
 
 <port-section>
-  <port-title>This is a timeline</port-title>
-  <port-timeline />
+    <port-title>My Experience</port-title>
+    <port-timeline [entries]="dataService.data().experiences" />
 </port-section>
 
 <!-- Projects section -->
 
 <port-section>
-  <port-title>Projects</port-title>
-  <div class="layouts--dual-column">
-    <port-card>
-      <port-card-title>Project 1</port-card-title>
-
-      <port-badge imgPath="https://placehold.co/100" />
-    </port-card>
-
-    <port-card>
-      <port-card-title>Project 1</port-card-title>
-
-      <port-badge imgPath="https://placehold.co/100" />
-      <port-badge imgPath="https://placehold.co/100" />
-      <port-card-image>
-        <img src="https://placehold.co/400" alt="" />
-      </port-card-image>
-    </port-card>
-  </div>
+    <port-title>My Projects</port-title>
+    <div class="layouts--dual-column">
+        @for (project of dataService.data().projects; track project.name) {
+            <a href="/projects/{{ makeUrlSafe(project.name) }}">
+                <port-card>
+                    <port-card-title>{{ project.name }}</port-card-title>
+                    <port-card-image>
+                        <img
+                            [src]="project.imgUrl"
+                            alt=""
+                        />
+                    </port-card-image>
+                    @for (skill of project.skills; track $index) {
+                        <port-badge [badge]="skill" />
+                    }
+                </port-card>
+            </a>
+        }
+    </div>
 </port-section>
 
 <!-- Education -->
 
 <port-section>
-  <port-title>Education</port-title>
-  <port-card>
-    <port-card-title>Some Education</port-card-title>
-    <port-card-sub-title>SMRT </port-card-sub-title>
-  </port-card>
+    <port-title>My Education</port-title>
+    <port-card>
+        <port-card-title>Bachelor of Information Technology</port-card-title>
+        <port-card-sub-title>Brigham Young University</port-card-sub-title>
+        <port-card-image>
+            <img
+                src="https://placehold.co/150"
+                alt=""
+            />
+        </port-card-image>
+    </port-card>
 </port-section>
 
 <port-footer />

@@ -1,9 +1,0 @@
-.details__hero {
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-
-  &-skills {
-    align-self: center;
-    justify-self: center;
-  }
-}

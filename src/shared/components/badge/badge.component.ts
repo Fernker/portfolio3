@@ -1,24 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, input, model } from '@angular/core';
+import { PortfolioSkill } from '../../models/portfolio.interface';
 
 @Component({
-  selector: 'port-badge',
-  imports: [CommonModule],
-  templateUrl: './badge.component.html',
-  styleUrl: './badge.component.scss',
+    selector: 'port-badge',
+    imports: [CommonModule],
+    templateUrl: './badge.component.html',
+    styleUrl: './badge.component.scss'
 })
 export class BadgeComponent {
-  size = model<'sm' | 'md'>('md');
+    size = model<'sm' | 'md'>('md');
 
-  imgPath = input.required<string>();
+    badge = input.required<PortfolioSkill>();
 
-  linkPath = input<string>();
+    linkPath = input<string>();
 
-  protected _mergedClasses = computed(() => [
-    this._generateClass('size', this.size()),
-  ]);
+    protected _mergedClasses = computed(() => [this._generateClass('size', this.size())]);
 
-  private _generateClass(modifier: string, value: string) {
-    return `port-badge--${modifier}-${value}`;
-  }
+    private _generateClass(modifier: string, value: string) {
+        return `port-badge--${modifier}-${value}`;
+    }
 }

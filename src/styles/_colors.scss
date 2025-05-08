@@ -1,0 +1,67 @@
+@use 'sass:map';
+
+$variable-prefix: 'portfolio';
+
+// Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dark-blue: #001f3f;
+$color-gray: #ccc;
+$color-light-gray: #f0f0f0;
+$green: #277154;
+
+// Mapping
+$theme: (
+    primary: red,
+    onPrimary: $color-white,
+    background: $color-white,
+    onBackground: $color-black,
+    backgroundSecondary: $color-dark-blue,
+    onBackgroundSecondary: $color-white,
+    surface: $color-light-gray,
+    onSurface: $color-black,
+    surfaceSecondary: $color-light-gray,
+    onSurfaceSecondary: $color-black
+);
+
+$dark-theme: (
+    primary: red,
+    onPrimary: $color-white,
+    background: $color-white,
+    onBackground: $color-black,
+    backgroundSecondary: $color-dark-blue,
+    onBackgroundSecondary: $color-white,
+    surface: $color-light-gray,
+    onSurface: $color-black,
+    surfaceSecondary: $color-light-gray,
+    onSurfaceSecondary: $color-black
+);
+
+@function color($token) {
+    @return var(--#{$variable-prefix}--#{$token});
+}
+
+@mixin getThemes() {
+    :root {
+        color-scheme: light dark;
+        @each $key, $value in $theme {
+            --#{$variable-prefix}--#{$key}: light-dark(
+                #{map.get($theme, $key)},
+                #{map.get($dark-theme, $key)}
+            );
+        }
+    }
+
+    html[data-theme='dark'] {
+        color-scheme: dark;
+    }
+
+    html[data-theme='light'] {
+        color-scheme: light;
+    }
+
+    html {
+        background: color(background);
+        color: color(onBackground);
+    }
+}
