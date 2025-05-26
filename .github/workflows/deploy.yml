@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 20.18.x
       - name: npm install
-        run: npm ci --f --legacy-peer-deps
+        run: npm ci
       - name: stamp version number
         if: github.event_name == 'release'
         uses: jacobtomlinson/gha-find-replace@v3
