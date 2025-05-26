@@ -10,20 +10,22 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'projects/:projectName',
+        path: 'projects/:projectName/',
         // canActivate: [URLGuard],
 
         component: ProjectPageComponent
     },
     {
-        path: 'experiences/:experienceCompanyName',
+        path: 'experiences/:experienceCompanyName/',
         canActivate: [URLGuard],
         component: ExperiencePageComponent
     },
     {
-        path: 'skills/:skillName',
-        redirectTo: 'home'
-        // component: SkillsPageComponent,
-        // canActivate: [URLGuard]
+        path: 'skills/:skillName/',
+        redirectTo: ''
+    },
+    {
+        path: '**',
+        redirectTo: ''
     }
 ];

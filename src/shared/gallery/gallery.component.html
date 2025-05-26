@@ -1,0 +1,13 @@
+<div class="gallery">
+    @for (image of images(); track $index) {
+        <div
+            class="gallery__image"
+            (click)="openGallery($index)"
+        >
+            <img
+                src="/screenshots/{{ image }}"
+                alt=""
+            />
+        </div>
+    }
+</div>

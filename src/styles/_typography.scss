@@ -1,3 +1,47 @@
-html {
-    font-family: 'Lato', sans-serif;
+@use 'sass:map';
+
+$_typography: (
+    h1: (
+        font-size: 2.5rem,
+        line-height: 1.2
+    ),
+    h2: (
+        font-size: 2rem,
+        line-height: 1.3
+    ),
+    h3: (
+        font-size: 1.4rem,
+        line-height: 1.3
+    ),
+    h4: (
+        font-size: 1.2rem,
+        line-height: 1.3
+    ),
+    body: (
+        font-size: 1rem,
+        line-height: 1.3
+    )
+);
+
+@mixin text($token) {
+    @if map.has-key($_typography, $token) {
+        $text-style: map.get($_typography, $token);
+        @each $property-name, $property-value in $text-style {
+            @if $property-name == 'font-family' {
+                // Grab the font-stack so that we don't have to keep defining it on every text style
+                font-family: map.get($_font-stacks, $property-value);
+            } @else {
+                #{$property-name}: #{$property-value};
+            }
+        }
+    } @else {
+        @error "No such token '#{$token}' in typography.";
+    }
+}
+
+@mixin getRoot() {
+    html {
+        font-family: 'Lato', sans-serif;
+        @include text(body);
+    }
 }

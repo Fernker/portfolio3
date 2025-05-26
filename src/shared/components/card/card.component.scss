@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'typography';
 
 :host {
     display: block;
@@ -6,7 +7,7 @@
 }
 
 ::ng-deep a:has(.port-card) {
-    &:hover {
+    &:hover .port-card {
         scale: 1.02;
         transition: scale 0.2s ease-in-out;
     }
@@ -18,7 +19,7 @@
     border-radius: 8px;
     padding: 8px;
     display: grid;
-    grid-template-columns: 0.4fr minmax(0, 1fr);
+    grid-template-columns: 130px minmax(0, 1fr);
     row-gap: 20px;
     column-gap: 20px;
     height: 100%;
@@ -44,11 +45,14 @@
     }
 
     &__title {
-        font-size: 26px;
+        @include typography.text(h3);
     }
 
     &__sub-title {
-        font-size: 20px;
+        @include typography.text(h4);
+        &::ng-deep port-card-sub-title {
+            display: block;
+        }
     }
 
     &__made-with {
@@ -70,10 +74,13 @@
 
     &__img {
         aspect-ratio: 1/1;
+        align-self: center;
 
         &::ng-deep port-card-image {
-            display: block;
             line-height: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
         }
 
         &::ng-deep img {
@@ -88,7 +95,7 @@
 
     &__info {
         display: grid;
-        row-gap: 20px;
+        row-gap: 10px;
         grid-auto-rows: min-content;
 
         > * {

@@ -52,7 +52,7 @@
     <port-title>My Projects</port-title>
     <div class="layouts--dual-column">
         @for (project of dataService.data().projects; track project.name) {
-            <a href="/projects/{{ makeUrlSafe(project.name) }}">
+            <a href="/projects/{{ makeUrlSafe(project.name) }}/">
                 <port-card>
                     <port-card-title>{{ project.name }}</port-card-title>
                     <port-card-image>
@@ -79,7 +79,7 @@
         <port-card-sub-title>Brigham Young University</port-card-sub-title>
         <port-card-image>
             <img
-                src="https://placehold.co/150"
+                src="logos/byu.svg"
                 alt=""
             />
         </port-card-image>

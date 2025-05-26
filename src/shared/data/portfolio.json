@@ -4,36 +4,52 @@
         {
             "company": "Ninety.io",
             "slug": "ninety",
-            "companyImgUrl": "https://placehold.co/500",
+            "companyImgUrl": "logos/90.svg",
             "title": "Senior Software Engineer",
-            "date": "2024 - Present",
-            "description": "Lorem",
+            "date": "2023 - Present",
+            "description": "Hired specifically to help lead and build a design system for Ninety.",
             "descriptionBullets": [
-                "1", "2", "3", "4", "5"
+                "Worked with design system design lead to define and build a design system.",
+                "Scoped, prioritized, and built components for the design system.",
+                "Migrated existing components to the new design system with minimal impact to the business.",
+                "Develop various tools to help make Figma the source of truth for design system artifacts.",
+                "Define a documentation strategy for the design system components."
             ],
             "screenshots": []
         },
         {
             "company": "Cricut",
             "slug": "cricut",
-            "companyImgUrl": "https://placehold.co/500",
-            "title": "Senior Software Engineer / Staff Software Engineer",
-            "date": "2016 - 2024",
+            "companyImgUrl": "logos/cricut.png",
+            "title": "Senior Software Engineer, Staff Software Engineer",
+            "date": "2016 - 2023",
             "description": [
-                "1", "2", "3", "4", "5"
+                "During my time at Cricut I was able to work on many projects.  Some of the key projects include the following:"
             ],
             "descriptionBullets": [
-                "1", "2", "3", "4", "5"
+                "Introduced, built, and defined internal design system and component library. Worked closely with UI counterparts to audit, propose, and build new components defined by UI in Angular.",
+                "Introduced Storybook to document components for designers and developers. Researched and built components with full accessibility in mind, including keyboard navigation, contrast ratios, and screen reader information.",
+                "Created and tested components to work in right-to-left languages.",
+                "Utilized Chromatic to add visual regression testing for the component library. ",
+                "Built various scripts to treat Figma as the source of truth for design system artifacts (colors, icons, typography). Allowing desktop, iOS, and Android platforms to use abstracted design tokens on their platforms.",
+                "Built automation tooling around internationalization (i18n) workflow. Allowing individual teams/pods to be more autonomous.",
+                "Architected distributed frameworks for pods to be able to work independently of the main bundling application and other pods.",
+                "Assisted in defining and overseeing migration from a single monorepo to distributed pod repo structure.",
+                "Introduced, built, defined, and managed the internationalization (i18n) process and migration for the entire desktop application",
+                "Introduced, defined, and built an interactive tutorial system. Allowing developers to define a custom tutorial and have the framework dynamically highlight elements for users to interact with and to progress the tutorial",
+                "Created curved text feature. Required working with custom drawing framework to overcome rendering issues to ensure a 60 fps experience for users.",
+                "Managed, taught, and coached interns with writing unit-test coverage for the application.",
+                "Introduced and built the initial unit tests for the application and created consistent patterns for other developers to follow."
             ],
             "screenshots": []
         },
         {
             "company": "Western Governors University",
             "slug": "western-governors-university",
-            "companyImgUrl": "https://placehold.co/400",
+            "companyImgUrl": "logos/wgu.svg",
             "title": "Tech Lead, Senior UI/UX Developer",
             "date":"2013 - 2026",
-            "description": "I was hired at WGU as the first UI developer on a new UI/UX team. WGU had a student portal that was built on older technologies and wasn't able to scale. I was tasked with moving the front-end to a more scalable solution for future student growth.",
+            "description": "Hired at WGU as the first UI developer on a new UI/UX team. WGU had a student portal that was built on older technologies and wasn't able to scale. I was tasked with moving the front-end to a more scalable solution for future student growth.",
             "descriptionBullets": [
                 "Introduced new technologies such as AngularJS, Sass, GruntJS.",
                 "Created centralized and re-usable GruntJS based development stack with necessary tools needed for a wide variety of tasks.",
@@ -45,13 +61,28 @@
                 "Implemented code reviews and standards among the team.",
                 "Introduced and trained on unit tests in JavaScript",
                 "Trained other developers in related technologies as needed."
+            ],
+            "screenshots": [
+                "wgu1.png",
+                "wgu2.png",
+                "wgu3.png",
+                "wgu4.png",
+
+                "wgu5.png",
+                "wgu6.png",
+                "wgu7.png",
+                "wgu8.png",
+                "wgu9.png",
+                "wgu10.png",
+                "wgu11.png",
+                "wgu12.png"
             ]
 
         },
         {
             "company": "Clearlink",
             "slug": "clearlink",
-            "companyImgUrl": "https://placehold.co/400",
+            "companyImgUrl": "logos/clearlink.png",
             "title": "Frontend Developer",
             "date":"2012 - 2013",
             "description": "As a front-end developer at Clearlink I worked on several sites and brands. This allowed me to quickly iterate on new skills and techniques in the industry.",
@@ -64,7 +95,7 @@
         {
             "company": "BYU: Chemistry Department",
             "slug": "byu-chemistry-department",
-            "companyImgUrl": "https://placehold.co/400",
+            "companyImgUrl": "logos/byu.svg",
             "title": "Web Applications Developer",
             "date":"2012 - 2013",
             "description": "During my time as a web applications developer for the BYU Chemistry Department I was able to work on several exciting projects. I was initially hired as a PHP developer to help maintain several PHP based applications. I was cross trained in Django and spent most of my time with that technology stack. During my time I was able to work closely with several faculty members to gather requirements, develop, test, and gather feedback.",
@@ -81,7 +112,7 @@
             "name": "Coaster Creds",
             "status": "Available",
             "url": "https://coastercreds.com",
-            "imgUrl": "https://placehold.co/300",
+            "imgUrl": "/logos/cc.png",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "skills": [
                 "angular",
@@ -94,7 +125,7 @@
             "name": "Rendered Mouse",
             "status": "Available",
             "url": "https://renderedmouse.com",
-            "imgUrl": "https://placehold.co/300",
+            "imgUrl": "/logos/rm.png",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "skills": [
                 "django",
@@ -104,7 +135,7 @@
         {
             "name": "Packing App",
             "status": "Limited",
-            "imgUrl": "https://placehold.co/300",
+            "imgUrl": "/logos/pack.png",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "skills": [
                 "angular",
@@ -115,7 +146,7 @@
         {
             "name": "Meal Tracking App",
             "status": "Limited",
-            "imgUrl": "https://placehold.co/300",
+            "imgUrl": "/logos/food.png",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "skills": [
                 "angular",
@@ -127,7 +158,7 @@
             "name": "Yesterday's Big Thing",
             "status": "Discontinued",
             "url": "http://web.archive.org/web/20140130111809/http://www.yesterdaysbigthing.com/2014/01/30/",
-            "imgUrl": "https://placehold.co/300",
+            "imgUrl": "/logos/ybt.png",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "skills": [
                 "Django"
@@ -136,7 +167,7 @@
         {
             "name": "Coaster Wall",
             "status": "Discontinued",
-            "imgUrl": "https://placehold.co/300",
+            "imgUrl": "/logos/cw.png",
             "description": "CoasterWall was one of my ultimate side projects. The site was a place to share theme park centered desktop pictures. It allowed users to upload images, crop them, and tag them for others to see. It was a lot of work and fun project to work on. It featured an admin panel with an email alert system to approve all new uploads from users.",
             "skills": [
                 "django"
@@ -145,7 +176,7 @@
         {
             "name": "Digital Nurse Practitioner Software",
             "status": "Capstone Project",
-            "imgUrl": "https://placehold.co/300",
+            "imgUrl": "/logos/byu.svg",
             "description": "For our capstone project we worked with the graduate nursing program of BYU. We worked with them as a client to solve the issue they had with massive amounts of paper documents. We built a digital nurse practitioner evaluation platform for the project. This allowed necessary parties to create, complete, and review evaluation forms. We also provided the ability to view items offline as needed when traveling to locations without an internet connection.",
             "skills": [
                 "django"

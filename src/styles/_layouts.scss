@@ -7,10 +7,10 @@
         justify-content: center;
         row-gap: 20px;
         grid-template-columns: minmax(300px, 1000px);
-        grid-template-rows: minmax(95vh, auto) auto;
+        grid-template-rows: minmax(85vh, auto) auto;
 
         &-half {
-            grid-template-rows: minmax(50vh, auto) auto;
+            grid-template-rows: minmax(min-content, 50vh) auto;
         }
 
         &-short {
@@ -18,27 +18,47 @@
         }
 
         > * {
-            margin: 0 calc(50% - 50vw);
+            --halfScrollbarWidth: calc(var(--scrollbarWidth) / 2);
+            margin: 0 calc(50% - 50vw + var(--halfScrollbarWidth));
             padding: 0 calc(50vw - 50%);
 
             padding-block: 40px;
+            padding-block-end: 55px;
+
+            @media screen and (max-width: 1024px) {
+                padding-inline: calc(50vw - 46%);
+            }
 
             &:nth-child(odd) {
                 background: colors.color(backgroundSecondary);
                 color: colors.color(onBackgroundSecondary);
+
+                &:not(:last-child) {
+                    clip-path: polygon(0% 0, 100% 0%, 100% calc(100% - 25px), 0 100%);
+                    // background: red;
+
+                    &:not(:first-child) {
+                        clip-path: polygon(0% 0, 100% 25px, 100% calc(100% - 35px), 0 100%);
+                    }
+                }
+
+                &:last-child {
+                    clip-path: polygon(0 0, 100% 25px, 100% 100%, 0 100%);
+                }
             }
         }
     }
 
     &--grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 20px;
     }
 
     &--dual-column {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        justify-content: center;
         gap: 20px;
     }
 }

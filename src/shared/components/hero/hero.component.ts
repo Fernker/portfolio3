@@ -1,19 +1,18 @@
 import { Component, Directive } from '@angular/core';
 
 @Directive({
-  selector: 'port-hero-title',
+    selector: 'port-hero-title'
 })
 export class HeroTitleComponent {}
 
 @Directive({
-  selector: 'port-hero-tag',
+    selector: 'port-hero-tag'
 })
 export class HeroTagComponent {}
 
 @Component({
-  selector: 'port-hero',
-  imports: [HeroTitleComponent, HeroTagComponent],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss',
+    selector: 'port-hero',
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.scss'
 })
 export class HeroComponent {}

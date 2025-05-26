@@ -1,12 +1,14 @@
+@use 'typography';
+
 :host {
-  font-size: 30px;
+    @include typography.text(h2);
 }
 
 .port-title {
-  // font-size: 30px;
+    // font-size: 30px;
 
-  //only allow text to be projected
-  > * {
-    display: none;
-  }
+    //only allow text to be projected
+    > * {
+        display: none;
+    }
 }

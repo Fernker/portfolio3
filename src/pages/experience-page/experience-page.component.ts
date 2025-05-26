@@ -11,6 +11,7 @@ import { SectionComponent } from '../../shared/components/section/section.compon
 import { TitleComponent } from '../../shared/components/title/title.component';
 import { DataService } from '../../shared/services/data.service';
 import { PortfolioExperience } from '../../shared/models/portfolio.interface';
+import { GalleryComponent } from '../../shared/gallery/gallery.component';
 
 @Component({
     selector: 'port-experience-page',
@@ -19,11 +20,10 @@ import { PortfolioExperience } from '../../shared/models/portfolio.interface';
         HeroComponent,
         HeroTitleComponent,
         HeroTagComponent,
-        BadgeComponent,
         TitleComponent,
         CardComponent,
         FooterComponent,
-        BadgeComponent
+        GalleryComponent
     ],
     host: {
         class: 'layouts--main layouts--main-half'

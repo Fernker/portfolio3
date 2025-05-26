@@ -1,11 +1,13 @@
-.port-hero {
-  &-title {
-    font-size: 42px;
-  }
+@use 'typography';
 
-  &-tag {
-    font-size: 36px;
-    display: grid;
-    gap: 8px;
-  }
+.port-hero {
+    &-title {
+        @include typography.text(h1);
+    }
+
+    &-tag {
+        @include typography.text(h2);
+        display: grid;
+        gap: 8px;
+    }
 }

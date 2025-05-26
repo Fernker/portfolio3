@@ -1,9 +1,10 @@
 <div class="port-timeline">
     @for (experience of entries(); track experience.company) {
-        <a href="/experiences/{{ experience.slug }}">
+        <a href="/experiences/{{ experience.slug }}/">
             <port-card>
                 <port-card-title>{{ experience.company }}</port-card-title>
                 <port-card-sub-title>{{ experience.title }}</port-card-sub-title>
+                <port-card-date>{{ experience.date }}</port-card-date>
                 <port-card-image>
                     <img
                         [src]="experience.companyImgUrl"

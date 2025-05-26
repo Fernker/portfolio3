@@ -11,6 +11,8 @@ import { PortfolioSkill } from '../../models/portfolio.interface';
 export class BadgeComponent {
     size = model<'sm' | 'md'>('md');
 
+    backgroundColor = input<string>('transparent');
+
     badge = input.required<PortfolioSkill>();
 
     linkPath = input<string>();

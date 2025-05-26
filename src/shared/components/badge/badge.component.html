@@ -1,6 +1,7 @@
 <div
     class="port-badge"
     [ngClass]="_mergedClasses()"
+    [style.backgroundColor]="backgroundColor()"
 >
     <img src="/badges/{{ badge().toLowerCase() }}.svg" />
 </div>

@@ -7,13 +7,13 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-dark-blue: #001f3f;
 $color-gray: #ccc;
-$color-light-gray: #f0f0f0;
+$color-light-gray: #e6e6e6;
 $green: #277154;
 
 // Mapping
 $theme: (
-    primary: red,
-    onPrimary: $color-white,
+    primary: $color-white,
+    onPrimary: $color-black,
     background: $color-white,
     onBackground: $color-black,
     backgroundSecondary: $color-dark-blue,

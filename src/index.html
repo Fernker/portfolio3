@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Portfolio3</title>
+        <title>Kenny Fernsten | Portfolio</title>
         <base href="/" />
         <meta
             name="viewport"
@@ -28,7 +28,30 @@
             rel="stylesheet"
         />
     </head>
+
     <body>
         <port-root></port-root>
     </body>
+    <script>
+        // Create the measurement node
+        var scrollDiv = document.createElement('div');
+        Object.assign(scrollDiv.style, {
+            width: '100px',
+            height: '100px',
+            overflow: 'scroll',
+            position: 'absolute',
+            top: '-9999px'
+        });
+        document.body.appendChild(scrollDiv);
+
+        // Get the scrollbar width
+        window.scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+        document.documentElement.style.setProperty(
+            '--scrollbarWidth',
+            `${window.scrollbarWidth}px`
+        );
+
+        // Delete the DIV
+        document.body.removeChild(scrollDiv);
+    </script>
 </html>

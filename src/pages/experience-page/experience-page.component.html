@@ -6,14 +6,12 @@
             <port-hero-tag class="experience__date">{{ experience().date }}</port-hero-tag>
         </port-hero>
         <div class="experience__hero-img">
-            <port-badge badge="Angular" />
+            <img [src]="experience().companyImgUrl" />
         </div>
     </div>
 </port-section>
 
 <port-section>
-    <!-- <port-title>{{ project().status }}</port-title> -->
-
     <div>
         @if (description()) {
             @for (para of description(); track $index) {
@@ -30,24 +28,13 @@
     </div>
 </port-section>
 
-<!-- @if (experience().skills) {
-    <port-section>
-        <port-title>Became</port-title>
-        <div class="layouts--dual-column">
-            @for (skill of experience().skills; track $index) {
-                <port-badge imgPath="#"></port-badge>
-            }
-        </div>
-    </port-section>
-} -->
-
-@if (experience().screenshots) {
-    <port-section>
+<port-section>
+    @if (experience().screenshots.length) {
         <port-title>Highlights</port-title>
-        <div class="layouts--dual-column">
-            <port-card> </port-card>
-        </div>
-    </port-section>
-}
+        <port-gallery [images]="experience().screenshots" />
+    }
+</port-section>
+
+<port-section />
 
 <port-footer />

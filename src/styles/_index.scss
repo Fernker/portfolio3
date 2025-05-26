@@ -7,3 +7,4 @@
 @use 'colors';
 
 @include colors.getThemes();
+@include typography.getRoot();
