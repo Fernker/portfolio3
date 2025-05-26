@@ -27,7 +27,7 @@ jobs:
       - name: node setup
         uses: actions/setup-node@v3
         with:
-          node-version: 18.15.x
+          node-version: 20.18.x
       - name: npm install
         run: npm ci --f --legacy-peer-deps
       - name: stamp version number
