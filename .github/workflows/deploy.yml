@@ -41,15 +41,15 @@ jobs:
       - name: build
         run: npm run build
       - name: Zip Dist
-        working-directory: ./dist/portfolio3/
-        run: tar -cvf portfolio-release-web.tar ./browser/
+        working-directory: ./dist/portfolio3/browser/
+        run: tar -cvf portfolio-release-web.tar ./
       - name: copy scp
         uses: appleboy/scp-action@3710327b67602586de2a7681d53fb1c009105c5d
         with:
             host: ${{secrets.HOST}}
             username: ${{secrets.USER}}
             password: ${{secrets.PW}}
-            source: ./dist/portfolio3/portfolio-release-web.tar
+            source: ./dist/portfolio3/browser/portfolio-release-web.tar
             target: ~/webapps/auto-deploy/portfolio3/
             strip_components: 3
             timeout: 120s
