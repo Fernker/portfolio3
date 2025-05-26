@@ -8,6 +8,6 @@ export class GalleryOutletService {
     show = this._show.asReadonly();
 
     changeVisibility(val: boolean) {
-        this._show.set(val);
+        // this._show.set(val);
     }
 }
