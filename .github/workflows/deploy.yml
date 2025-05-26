@@ -51,7 +51,7 @@ jobs:
             password: ${{secrets.PW}}
             source: ./dist/portfolio3/browser/portfolio-release-web.tar
             target: ~/webapps/auto-deploy/portfolio3/
-            strip_components: 3
+            strip_components: 4
             timeout: 120s
       - name: remote ssh
         uses: appleboy/ssh-action@4330a1ea489ced98a6778fb35bb6bfed8b61fca5
