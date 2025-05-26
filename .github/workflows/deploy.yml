@@ -41,7 +41,7 @@ jobs:
       - name: build
         run: npm run build
       - name: Zip Dist
-        working-directory: ./dist/portfolio3/
+        working-directory: ./dist/portfolio3/browser/
         run: tar -cvf portfolio-release-web.tar ./
       - name: copy scp
         uses: appleboy/scp-action@3710327b67602586de2a7681d53fb1c009105c5d
