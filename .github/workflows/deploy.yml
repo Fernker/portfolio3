@@ -23,7 +23,7 @@ jobs:
       #     script: |
       #       pwd
       #       echo ${{secrets.HOST}} | base64
-      - run: git fetch origin master
+      - run: git fetch origin main
       - name: node setup
         uses: actions/setup-node@v3
         with:
