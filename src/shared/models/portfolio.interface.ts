@@ -25,7 +25,7 @@ export interface PortfolioExperience {
 
 export interface PortfolioScreenshot {
     url: string;
-    description: string;
+    // description: string;
 }
 
 export interface PortfolioProject {

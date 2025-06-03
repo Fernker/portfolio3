@@ -9,6 +9,7 @@ $color-dark-blue: #001f3f;
 $color-gray: #ccc;
 $color-light-gray: #e6e6e6;
 $green: #277154;
+$color-black-transparent: #0000006b;
 
 // Mapping
 $theme: (
@@ -21,7 +22,9 @@ $theme: (
     surface: $color-light-gray,
     onSurface: $color-black,
     surfaceSecondary: $color-light-gray,
-    onSurfaceSecondary: $color-black
+    onSurfaceSecondary: $color-black,
+    overlay: $color-black-transparent,
+    onOverlay: $color-white
 );
 
 $dark-theme: (
@@ -34,7 +37,9 @@ $dark-theme: (
     surface: $color-light-gray,
     onSurface: $color-black,
     surfaceSecondary: $color-light-gray,
-    onSurfaceSecondary: $color-black
+    onSurfaceSecondary: $color-black,
+    overlay: $color-black-transparent,
+    onOverlay: $color-white
 );
 
 @function color($token) {

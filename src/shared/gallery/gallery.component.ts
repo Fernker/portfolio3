@@ -13,7 +13,11 @@ export class GalleryComponent {
 
     private _galleryOutletService = inject(GalleryOutletService);
 
+    ngOnInit() {
+        this._galleryOutletService.init(this.images());
+    }
+
     protected openGallery(index: number) {
-        this._galleryOutletService.changeVisibility(true);
+        this._galleryOutletService.show(index);
     }
 }

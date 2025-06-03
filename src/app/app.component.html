@@ -1,2 +1,4 @@
 <router-outlet />
-<port-gallery-outlet />
+@if (galleryOutletService.shouldShow()) {
+    <port-gallery-outlet />
+}

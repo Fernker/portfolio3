@@ -29,8 +29,10 @@
 </port-section>
 
 <port-section>
-    @if (experience().screenshots.length) {
+    @if (experience().screenshots) {
         <port-title>Highlights</port-title>
+    }
+    @if (experience().screenshots) {
         <port-gallery [images]="experience().screenshots" />
     }
 </port-section>
