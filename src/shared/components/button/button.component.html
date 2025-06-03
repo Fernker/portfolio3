@@ -1,3 +1,7 @@
-<button class="port-button">
-  <ng-content />
-</button>
+<a
+    [href]="href()"
+    class="port-button"
+    target="_blank"
+>
+    <ng-content />
+</a>

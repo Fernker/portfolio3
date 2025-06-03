@@ -113,7 +113,7 @@
             "status": "Available",
             "url": "https://coastercreds.com",
             "imgUrl": "/logos/cc.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description": "App that allows for users to track which roller coasters they've ridden around the world.",
             "skills": [
                 "angular",
                 "material",
@@ -126,7 +126,7 @@
             "status": "Available",
             "url": "https://renderedmouse.com",
             "imgUrl": "/logos/rm.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description": "Personal hobby projects site.  Recently overhauled and upgraded it to require 75% less code.",
             "skills": [
                 "django",
                 "mySQL"
@@ -136,7 +136,7 @@
             "name": "Packing App",
             "status": "Limited",
             "imgUrl": "/logos/pack.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description": "Small app for helping with packing for trips.  App is focused on simplicity of the required task.",
             "skills": [
                 "angular",
                 "firebase",
@@ -147,7 +147,7 @@
             "name": "Meal Tracking App",
             "status": "Limited",
             "imgUrl": "/logos/food.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description": "Simple app for tracking meal preferences for family members.",
             "skills": [
                 "angular",
                 "firebase",
@@ -159,7 +159,7 @@
             "status": "Discontinued",
             "url": "http://web.archive.org/web/20140130111809/http://www.yesterdaysbigthing.com/2014/01/30/",
             "imgUrl": "/logos/ybt.png",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description": "YouTube aggregator site to showcase the best videos of YouTube.",
             "skills": [
                 "Django"
             ]
@@ -168,7 +168,7 @@
             "name": "Coaster Wall",
             "status": "Discontinued",
             "imgUrl": "/logos/cw.png",
-            "description": "CoasterWall was one of my ultimate side projects. The site was a place to share theme park centered desktop pictures. It allowed users to upload images, crop them, and tag them for others to see. It was a lot of work and fun project to work on. It featured an admin panel with an email alert system to approve all new uploads from users.",
+            "description": "CoasterWall was a place to share theme park related desktop pictures. It allowed users to upload images, crop them, and tag them for others to see.",
             "skills": [
                 "django"
             ]
@@ -177,7 +177,7 @@
             "name": "Digital Nurse Practitioner Software",
             "status": "Capstone Project",
             "imgUrl": "/logos/byu.svg",
-            "description": "For our capstone project we worked with the graduate nursing program of BYU. We worked with them as a client to solve the issue they had with massive amounts of paper documents. We built a digital nurse practitioner evaluation platform for the project. This allowed necessary parties to create, complete, and review evaluation forms. We also provided the ability to view items offline as needed when traveling to locations without an internet connection.",
+            "description": "Capstone project that required working with the graduate nursing program of BYU. Worked as a client to the department to solve the issue with massive amounts of paper documentation. ",
             "skills": [
                 "django"
 
