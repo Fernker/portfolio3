@@ -35,7 +35,7 @@ export interface PortfolioProject {
     description: string | string[];
     descriptionBullets?: string[];
     url?: string;
-    screenshots?: PortfolioScreenshot[];
+    screenshots: PortfolioScreenshot[];
     skills: PortfolioSkill[];
 }
 

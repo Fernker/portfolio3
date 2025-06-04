@@ -11,6 +11,7 @@ import { SectionComponent } from '../../shared/components/section/section.compon
 import { TitleComponent } from '../../shared/components/title/title.component';
 import { PortfolioProject } from '../../shared/models/portfolio.interface';
 import { DataService } from '../../shared/services/data.service';
+import { GalleryComponent } from '../../shared/gallery/gallery.component';
 
 @Component({
     selector: 'port-project-page',
@@ -23,7 +24,8 @@ import { DataService } from '../../shared/services/data.service';
         TitleComponent,
         CardComponent,
         FooterComponent,
-        BadgeComponent
+        BadgeComponent,
+        GalleryComponent
     ],
     host: {
         class: 'layouts--main layouts--main-half'

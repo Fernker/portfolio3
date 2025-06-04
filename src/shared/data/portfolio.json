@@ -15,7 +15,11 @@
                 "Develop various tools to help make Figma the source of truth for design system artifacts.",
                 "Define a documentation strategy for the design system components."
             ],
-            "screenshots": []
+            "screenshots": [
+                "nty1.png",
+                "nty2.png",
+                "nty3.png"
+            ]
         },
         {
             "company": "Cricut",
@@ -41,7 +45,12 @@
                 "Managed, taught, and coached interns with writing unit-test coverage for the application.",
                 "Introduced and built the initial unit tests for the application and created consistent patterns for other developers to follow."
             ],
-            "screenshots": []
+            "screenshots": [
+                "cr1.png",
+                "cr2.png",
+                "cr3.png",
+                "cr4.png"
+            ]
         },
         {
             "company": "Western Governors University",
@@ -92,19 +101,11 @@
                 "Created an elegant product search and checkout process for AT&T services."
             ],
             "screenshots": [
-                "wgu1.png",
-                "wgu2.png",
-                "wgu3.png",
-                "wgu4.png",
-
-                "wgu5.png",
-                "wgu6.png",
-                "wgu7.png",
-                "wgu8.png",
-                "wgu9.png",
-                "wgu10.png",
-                "wgu11.png",
-                "wgu12.png"
+                "cl1.png",
+                "cl2.png",
+                "cl3.png",
+                "cl4.png",
+                "cl5.png"
             ]
         },
         {
@@ -128,12 +129,18 @@
             "status": "Available",
             "url": "https://coastercreds.com",
             "imgUrl": "/logos/cc.png",
-            "description": "App that allows for users to track which roller coasters they've ridden around the world.",
+            "description": "App that allows for users to track which roller coasters they've ridden around the world.  Offers multiple profiles with one account for families.",
             "skills": [
                 "angular",
                 "material",
                 "django",
                 "mysql"
+            ],
+            "screenshots": [
+                "cc1.png",
+                "cc2.png",
+                "cc3.png",
+                "cc4.png"
             ]
         },
         {
@@ -145,6 +152,10 @@
             "skills": [
                 "django",
                 "mySQL"
+            ],
+            "screenshots": [
+                "rm1.png",
+                "rm2.png"
             ]
         },
         {
@@ -156,7 +167,8 @@
                 "angular",
                 "firebase",
                 "material"
-            ]
+            ],
+            "screenshots": ["pack1.png"]
         },
         {
             "name": "Meal Tracking App",
@@ -167,7 +179,8 @@
                 "angular",
                 "firebase",
                 "material"
-            ]
+            ],
+            "screenshots": ["food1.png"]
         },
         {
             "name": "Yesterday's Big Thing",
@@ -177,6 +190,11 @@
             "description": "YouTube aggregator site to showcase the best videos of YouTube.",
             "skills": [
                 "Django"
+            ],
+            "screenshots": [
+                "ybt1.png",
+                "ybt2.png",
+                "ybt3.png"
             ]
         },
         {

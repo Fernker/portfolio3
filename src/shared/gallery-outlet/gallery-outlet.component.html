@@ -1,10 +1,16 @@
-<div class="gallery">
-    <button (click)="galleryOutletService.change(-1)">‹</button>
-    <div class="gallery__content">
+<div
+    class="gallery"
+    (click)="galleryOutletService.hide()"
+>
+    <button (click)="block($event); galleryOutletService.change(-1)">‹</button>
+    <div
+        class="gallery__content"
+        (click)="block($event)"
+    >
         <img
             [src]="galleryOutletService.image()"
             alt=""
         />
     </div>
-    <button (click)="galleryOutletService.change(1)">›</button>
+    <button (click)="block($event); galleryOutletService.change(1)">›</button>
 </div>

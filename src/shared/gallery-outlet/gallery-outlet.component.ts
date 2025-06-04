@@ -29,4 +29,9 @@ export class GalleryOutletComponent {
             this.galleryOutletService.change(-1);
         }
     }
+
+    protected block(event: Event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
 }

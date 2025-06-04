@@ -51,11 +51,11 @@
     </port-section>
 }
 <port-section>
-    <port-title>Highlights</port-title>
     @if (project().screenshots) {
-        <div class="layouts--dual-column">
-            <port-card> </port-card>
-        </div>
+        <port-title>Highlights</port-title>
+    }
+    @if (project().screenshots) {
+        <port-gallery [images]="project().screenshots" />
     }
 </port-section>
 
