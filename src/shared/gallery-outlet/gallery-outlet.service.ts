@@ -21,12 +21,16 @@ export class GalleryOutletService {
     }
 
     show(index: number) {
-        this._show.set(true);
-        this._index.set(index);
+        document.startViewTransition(() => {
+            this._show.set(true);
+            this._index.set(index);
+        });
     }
 
     hide() {
-        this._show.set(false);
+        document.startViewTransition(() => {
+            this._show.set(false);
+        });
     }
 
     change(amount: number) {
@@ -37,6 +41,8 @@ export class GalleryOutletService {
         } else if (to > this._images.length - 1) {
             to = 0;
         }
-        this._index.set(to);
+        document.startViewTransition(() => {
+            this._index.set(to);
+        });
     }
 }
