@@ -21,7 +21,6 @@ import { GalleryComponent } from '../../shared/gallery/gallery.component';
         HeroTitleComponent,
         HeroTagComponent,
         TitleComponent,
-        CardComponent,
         FooterComponent,
         GalleryComponent
     ],

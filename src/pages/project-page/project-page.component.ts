@@ -22,7 +22,6 @@ import { GalleryComponent } from '../../shared/gallery/gallery.component';
         HeroTagComponent,
         BadgeComponent,
         TitleComponent,
-        CardComponent,
         FooterComponent,
         BadgeComponent,
         GalleryComponent
