@@ -34,6 +34,7 @@
     <div class="skillz layouts--grid">
         @for (skill of dataService.data().skills; track skill) {
             <port-badge
+                class="revealing-image"
                 [badge]="skill"
                 size="md"
             />
@@ -43,7 +44,10 @@
 
 <port-section>
     <port-title>My Experience</port-title>
-    <port-timeline [entries]="dataService.data().experiences" />
+    <port-timeline
+        class="revealing-image"
+        [entries]="dataService.data().experiences"
+    />
 </port-section>
 
 <!-- Projects section -->
@@ -52,7 +56,10 @@
     <port-title>My Projects</port-title>
     <div class="layouts--dual-column">
         @for (project of dataService.data().projects; track project.name) {
-            <a href="/projects/{{ makeUrlSafe(project.name) }}/">
+            <a
+                href="/projects/{{ makeUrlSafe(project.name) }}/"
+                class="revealing-image"
+            >
                 <port-card>
                     <port-card-title>{{ project.name }}</port-card-title>
                     <port-card-image>

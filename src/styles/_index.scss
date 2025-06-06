@@ -6,5 +6,7 @@
 
 @use 'colors';
 
+@use 'animations';
+
 @include colors.getThemes();
 @include typography.getRoot();
