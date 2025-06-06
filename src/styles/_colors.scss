@@ -6,8 +6,10 @@ $variable-prefix: 'portfolio';
 $color-white: #ffffff;
 $color-black: #000000;
 $color-dark-blue: #001f3f;
+$color-darker-blue: #041424;
 $color-gray: #ccc;
 $color-light-gray: #e6e6e6;
+$color-dark-gray: #373737;
 $green: #277154;
 $color-black-transparent: #0000006b;
 
@@ -28,14 +30,14 @@ $theme: (
 );
 
 $dark-theme: (
-    primary: red,
-    onPrimary: $color-white,
-    background: $color-white,
-    onBackground: $color-black,
+    primary: $color-white,
+    onPrimary: $color-black,
+    background: $color-darker-blue,
+    onBackground: $color-white,
     backgroundSecondary: $color-dark-blue,
     onBackgroundSecondary: $color-white,
-    surface: $color-light-gray,
-    onSurface: $color-black,
+    surface: $color-dark-gray,
+    onSurface: $color-white,
     surfaceSecondary: $color-light-gray,
     onSurfaceSecondary: $color-black,
     overlay: $color-black-transparent,
