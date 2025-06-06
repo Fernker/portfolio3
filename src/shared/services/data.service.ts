@@ -13,10 +13,12 @@ export class DataService {
         return { ...this._data() }; //, skills: this._getSkills(this._data()) };
     });
 
-    hasProperty(type: string, property: string) {
+    hasItemWithSlug(type: string, property: string) {
         const data = this.data();
         // TODO fix this any
-        return (this.data() as any)[type]?.hasOwnProperty(property) || false;
+        return (data as any)[type]?.some((item: { slug: string }) => {
+            return item.slug === property;
+        });
     }
 
     private _getSkills(data: PortfolioJson): string[] {

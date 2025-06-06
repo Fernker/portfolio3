@@ -11,7 +11,7 @@ export const routes: Routes = [
     },
     {
         path: 'projects/:projectName/',
-        // canActivate: [URLGuard],
+        canActivate: [URLGuard],
 
         component: ProjectPageComponent
     },
