@@ -2,6 +2,12 @@
     class="gallery"
     (click)="galleryOutletService.hide()"
 >
+    <button
+        class="gallery__close"
+        (click)="galleryOutletService.hide()"
+    >
+        &times;
+    </button>
     <button (click)="block($event); galleryOutletService.change(-1)">‹</button>
     <div
         class="gallery__content"
