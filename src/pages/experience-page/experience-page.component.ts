@@ -12,6 +12,7 @@ import { TitleComponent } from '../../shared/components/title/title.component';
 import { DataService } from '../../shared/services/data.service';
 import { PortfolioExperience } from '../../shared/models/portfolio.interface';
 import { GalleryComponent } from '../../shared/gallery/gallery.component';
+import { ParticlesComponent } from '../../shared/components/particles/particles.component';
 
 @Component({
     selector: 'port-experience-page',
@@ -22,7 +23,8 @@ import { GalleryComponent } from '../../shared/gallery/gallery.component';
         HeroTagComponent,
         TitleComponent,
         FooterComponent,
-        GalleryComponent
+        GalleryComponent,
+        ParticlesComponent
     ],
     host: {
         class: 'layouts--main layouts--main-half'

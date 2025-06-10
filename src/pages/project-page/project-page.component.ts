@@ -12,6 +12,7 @@ import { TitleComponent } from '../../shared/components/title/title.component';
 import { PortfolioProject } from '../../shared/models/portfolio.interface';
 import { DataService } from '../../shared/services/data.service';
 import { GalleryComponent } from '../../shared/gallery/gallery.component';
+import { ParticlesComponent } from '../../shared/components/particles/particles.component';
 
 @Component({
     selector: 'port-project-page',
@@ -24,7 +25,8 @@ import { GalleryComponent } from '../../shared/gallery/gallery.component';
         TitleComponent,
         FooterComponent,
         BadgeComponent,
-        GalleryComponent
+        GalleryComponent,
+        ParticlesComponent
     ],
     host: {
         class: 'layouts--main layouts--main-half'
