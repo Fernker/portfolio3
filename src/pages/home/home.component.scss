@@ -13,6 +13,11 @@
             justify-self: end;
             column-gap: 20px;
             display: flex;
+            z-index: 2;
+        }
+
+        &__container {
+            position: relative;
         }
     }
 }

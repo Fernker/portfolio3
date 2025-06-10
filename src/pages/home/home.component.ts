@@ -12,6 +12,7 @@ import { TimelineComponent } from '../../shared/chunks/timeline/timeline.compone
 import { CardComponents } from '../../shared/components/card/card.component';
 import { FooterComponent } from '../../shared/chunks/footer/footer.component';
 import { DataService } from '../../shared/services/data.service';
+import { ParticlesComponent } from '../../shared/components/particles/particles.component';
 
 @Component({
     selector: 'port-home',
@@ -25,7 +26,8 @@ import { DataService } from '../../shared/services/data.service';
         BadgeComponent,
         TimelineComponent,
         CardComponents,
-        FooterComponent
+        FooterComponent,
+        ParticlesComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
